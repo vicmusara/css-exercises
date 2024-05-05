@@ -9,12 +9,17 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 33vw 67vw;
+  grid-template-rows: 10vh 10vh 80vh;
+  grid-gap: 10px;
+  grid-template-areas: "a a" "c d" "c f" "g g";
 }
 
 .container div {
   padding: 15px;
   font-size: 32px;
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   font-weight: bold;
   color: white;
   border-radius: 15px;
@@ -22,22 +27,27 @@ html {
 
 .header {
   background-color: #006157;
+  grid-area: a;
 }
 
 .sidebar {
   background-color: #005B94;
+  grid-area: c;
 }
 
 .nav {
   background-color: #642cde;
+  grid-area: d;
 }
 
 .article {
   background-color: #7E1DC3;
+  grid-area: f;
 }
 
 .footer {
   background-color: #393f4d;
+  grid-area: g;
 }
 
 .article p {
