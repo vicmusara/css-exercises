@@ -9,12 +9,21 @@ html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Dynamic track sizes for columns */
+  grid-template-rows: auto 1fr auto; /* Dynamic track sizes for rows */
+  grid-gap: 10px;
+  grid-template-areas:
+    "header header"
+    "sidebar nav"
+    "sidebar article"
+    "footer footer";
 }
 
 .container div {
   padding: 15px;
   font-size: 32px;
-  font-family: Helvetica;
+  font-family: Helvetica, serif;
   font-weight: bold;
   color: white;
   border-radius: 15px;
